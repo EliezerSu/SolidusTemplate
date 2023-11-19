@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>SOLIDUS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Estilos-->
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/home.styles.css" />
+    <!--Iconos-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
   </head>
   <body>
     <header>
@@ -26,5 +32,16 @@
         />
       </div>
     </header>
+    <input type="text" class="icon-input" placeholder="Email" />
+    <div class="sidebar" id="sidebar">
+      <button onclick="toggleSidebar()">☰ Toggle Sidebar</button>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Perfil</a></li>
+        <li><a href="#">Configuración</a></li>
+        <li><a href="#">Cerrar Sesión</a></li>
+      </ul>
+    </div>
+    <script src="scripts/home.js"></script>
   </body>
 </html>
