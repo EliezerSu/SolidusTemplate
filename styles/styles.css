@@ -1,52 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
 }
 
 header {
-    background-color: #4477CE;
-    color: #fff;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: #4477ce;
+  color: #fff;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .sidebar {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    background-color: #fff; /* Fondo blanco para el sidebar */
-    padding-top: 20px;
-    transition: 0.5s;
-    overflow-x: hidden;
-    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1); /* Sombra hacia la derecha */
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  background-color: #fff;
+  padding-top: 20px;
+  transition: 0.5s;
+  overflow-x: hidden;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.1);
 }
 
+.sidebar-toggle {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.sidebar-toggle-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 200px;
+    z-index: 1000; /* Asegúrate de que el z-index sea superior al z-index del sidebar */
+    transition: left 0.5s; /* Añadir transición para que se mueva junto al sidebar */
+  }
+  
+  .sidebar-toggle-wrapper.collapsed {
+    left: 0px; /* Mover el botón junto con el sidebar colapsado */
+  }
+
 .sidebar.collapsed {
-    width: 50px; /* Ancho cuando está colapsado */
+  width: 50px;
 }
 
 .sidebar button {
-    font-size: 16px;
-    margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .sidebar ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .sidebar li {
-    padding: 10px;
-    text-align: center;
+  padding: 10px;
+  text-align: center;
 }
 
 .sidebar a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    display: block;
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+  display: block;
 }
